@@ -1,0 +1,390 @@
+.stage {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top, rgba(73, 223, 255, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(22, 28, 43, 0.92), rgba(12, 16, 27, 0.98));
+  box-shadow: var(--shadow);
+}
+
+.compact {
+  padding: 10px;
+  min-width: 94px;
+}
+
+.ring {
+  position: absolute;
+  inset: auto auto 12% 50%;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transform: translateX(-50%);
+}
+
+.avatar {
+  position: relative;
+  width: min(100%, 220px);
+  height: 250px;
+  margin: 0 auto;
+}
+
+.compact .avatar {
+  width: 82px;
+  height: 98px;
+}
+
+.head {
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  width: 112px;
+  height: 130px;
+  background: var(--skin);
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: inset -8px -10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.compact .head {
+  top: 12px;
+  width: 48px;
+  height: 56px;
+}
+
+.round {
+  border-radius: 48% 48% 44% 44% / 42% 42% 50% 50%;
+}
+
+.softSquare {
+  border-radius: 42% 42% 34% 34% / 34% 34% 44% 44%;
+}
+
+.heart {
+  border-radius: 52% 52% 38% 38% / 42% 42% 52% 52%;
+}
+
+.hair {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: 132px;
+  height: 92px;
+  background: var(--hair);
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.compact .hair {
+  top: 2px;
+  width: 58px;
+  height: 36px;
+}
+
+.quiff {
+  border-radius: 46% 54% 28% 30% / 56% 60% 30% 32%;
+}
+
+.wave {
+  border-radius: 58% 42% 30% 30% / 56% 52% 28% 28%;
+}
+
+.spikes {
+  clip-path: polygon(7% 100%, 0 46%, 16% 18%, 30% 0, 40% 16%, 52% 0, 66% 18%, 80% 0, 92% 26%, 100% 60%, 100% 100%);
+  border-radius: 24px 24px 10px 10px;
+}
+
+.buzz {
+  height: 64px;
+  border-radius: 52% 52% 28% 28% / 62% 62% 20% 20%;
+}
+
+.brows,
+.eyes {
+  position: absolute;
+  left: 50%;
+  width: 62px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateX(-50%);
+}
+
+.compact .brows,
+.compact .eyes {
+  width: 28px;
+}
+
+.brows {
+  top: 32px;
+}
+
+.eyes {
+  top: 52px;
+}
+
+.compact .brows {
+  top: 16px;
+}
+
+.compact .eyes {
+  top: 24px;
+}
+
+.brows span {
+  width: 22px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(28, 27, 31, 0.72);
+}
+
+.compact .brows span {
+  width: 10px;
+  height: 3px;
+}
+
+.flat span {
+  transform: rotate(0deg);
+}
+
+.arch span:first-child {
+  transform: rotate(-10deg);
+}
+
+.arch span:last-child {
+  transform: rotate(10deg);
+}
+
+.bold span {
+  height: 7px;
+}
+
+.compact .bold span {
+  height: 4px;
+}
+
+.eyes span {
+  width: 18px;
+  height: 10px;
+  border-bottom: 3px solid #14161d;
+  border-radius: 0 0 16px 16px;
+}
+
+.compact .eyes span {
+  width: 8px;
+  height: 4px;
+  border-bottom-width: 2px;
+}
+
+.wide span {
+  height: 12px;
+}
+
+.sharp span {
+  transform: skewX(-16deg);
+}
+
+.smile span {
+  border-radius: 0 0 20px 20px;
+  transform: translateY(2px);
+}
+
+.nose {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.14);
+  transform: translateX(-50%);
+}
+
+.compact .nose {
+  top: 34px;
+}
+
+.button {
+  width: 12px;
+  height: 18px;
+  border-radius: 999px;
+}
+
+.classic {
+  width: 10px;
+  height: 22px;
+  border-radius: 999px;
+}
+
+.defined {
+  width: 14px;
+  height: 24px;
+  border-radius: 10px;
+}
+
+.compact .button,
+.compact .classic,
+.compact .defined {
+  width: 6px;
+  height: 10px;
+}
+
+.mouth {
+  position: absolute;
+  top: 104px;
+  left: 50%;
+  width: 34px;
+  height: 14px;
+  border-bottom: 4px solid rgba(92, 31, 31, 0.78);
+  transform: translateX(-50%);
+}
+
+.compact .mouth {
+  top: 46px;
+  width: 16px;
+  height: 8px;
+  border-bottom-width: 2px;
+}
+
+.grin {
+  border-radius: 0 0 18px 18px;
+}
+
+.smirk {
+  border-radius: 0 0 18px 18px;
+  transform: translateX(-50%) rotate(-8deg);
+}
+
+.calm {
+  width: 28px;
+  height: 2px;
+  background: rgba(92, 31, 31, 0.78);
+  border-bottom: none;
+  border-radius: 999px;
+}
+
+.compact .calm {
+  width: 12px;
+  height: 2px;
+}
+
+.neck {
+  position: absolute;
+  top: 146px;
+  left: 50%;
+  width: 30px;
+  height: 24px;
+  background: var(--skin);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.compact .neck {
+  top: 58px;
+  width: 12px;
+  height: 10px;
+}
+
+.body {
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 176px;
+  height: 110px;
+  background: var(--outfit);
+  transform: translateX(-50%);
+  border-radius: 40px 40px 20px 20px;
+  z-index: 0;
+}
+
+.compact .body {
+  width: 72px;
+  height: 36px;
+}
+
+.collar {
+  position: absolute;
+  inset: 0 auto auto 50%;
+  width: 50px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(-50%);
+  border-radius: 0 0 18px 18px;
+}
+
+.compact .collar {
+  width: 18px;
+  height: 10px;
+}
+
+.accessory {
+  position: absolute;
+  z-index: 4;
+  background: var(--accent);
+}
+
+.visor {
+  top: 42px;
+  left: 50%;
+  width: 124px;
+  height: 18px;
+  border-radius: 999px;
+  opacity: 0.75;
+  transform: translateX(-50%);
+}
+
+.earpiece {
+  top: 88px;
+  left: calc(50% + 48px);
+  width: 12px;
+  height: 28px;
+  border-radius: 999px;
+}
+
+.medal {
+  bottom: 46px;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+.compact .visor {
+  top: 16px;
+  width: 52px;
+  height: 8px;
+}
+
+.compact .earpiece {
+  top: 36px;
+  left: calc(50% + 20px);
+  width: 6px;
+  height: 14px;
+}
+
+.compact .medal {
+  bottom: 16px;
+  width: 14px;
+  height: 14px;
+}
+
+.captionRow {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.captionRow span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}

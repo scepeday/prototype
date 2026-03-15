@@ -1,0 +1,64 @@
+.nav {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 26px;
+  background: rgba(13, 18, 30, 0.8);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.35);
+}
+
+.link {
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  min-height: 62px;
+  padding: 8px 4px;
+  border-radius: 18px;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.link:hover {
+  color: var(--text-strong);
+  transform: translateY(-1px);
+}
+
+.active {
+  color: #13161d;
+  background: linear-gradient(135deg, var(--neon-lime), #f4ffbf);
+}
+
+.active .iconWrap {
+  background: rgba(18, 22, 29, 0.14);
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.link svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

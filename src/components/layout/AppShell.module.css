@@ -1,0 +1,69 @@
+.pageChrome {
+  min-height: 100svh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+}
+
+.phoneFrame {
+  --glowA: rgba(214, 255, 55, 0.2);
+  --glowB: rgba(73, 223, 255, 0.14);
+  position: relative;
+  width: min(100%, 430px);
+  min-height: 100svh;
+  overflow: hidden;
+  border-inline: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(7, 10, 18, 0.94), rgba(8, 12, 22, 0.98));
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 12%, var(--glowA), transparent 34%),
+    radial-gradient(circle at 88% 18%, var(--glowB), transparent 30%),
+    linear-gradient(180deg, rgba(17, 23, 38, 0.76), rgba(5, 9, 16, 0.96));
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity: 0.18;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 100%);
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  padding: 24px 18px 28px;
+}
+
+.withNav {
+  padding-bottom: 108px;
+}
+
+.homeGlow {
+  --glowA: rgba(214, 255, 55, 0.2);
+  --glowB: rgba(73, 223, 255, 0.14);
+}
+
+.scanGlow {
+  --glowA: rgba(255, 107, 99, 0.2);
+  --glowB: rgba(73, 223, 255, 0.16);
+}
+
+.roomsGlow {
+  --glowA: rgba(73, 223, 255, 0.18);
+  --glowB: rgba(214, 255, 55, 0.16);
+}
+
+.rewardsGlow {
+  --glowA: rgba(255, 107, 99, 0.16);
+  --glowB: rgba(214, 255, 55, 0.18);
+}

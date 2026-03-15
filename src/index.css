@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;700;800&display=swap");
+
+:root {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at top left, rgba(78, 255, 192, 0.12), transparent 34%),
+    radial-gradient(circle at top right, rgba(74, 226, 255, 0.12), transparent 28%),
+    #090c14;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #090c14;
+  --panel: rgba(13, 18, 30, 0.9);
+  --panel-strong: rgba(19, 26, 42, 0.96);
+  --panel-soft: rgba(20, 25, 38, 0.8);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text-strong: #f5f7fb;
+  --text: rgba(245, 247, 251, 0.82);
+  --text-muted: rgba(245, 247, 251, 0.58);
+  --neon-lime: #d6ff37;
+  --electric-cyan: #49dfff;
+  --hot-coral: #ff6b63;
+  --shadow: 0 28px 60px rgba(0, 0, 0, 0.42);
+  --radius-xl: 30px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --font-display: "Sora", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(214, 255, 55, 0.22);
+}
