@@ -41,7 +41,7 @@ The production output is generated in `dist/`.
 
 ## Deploy to GitHub Pages
 
-This app uses `HashRouter`, so client-side routes remain compatible with static hosting.
+This app uses `HashRouter`, so client-side routes remain compatible with static hosting. The Vite base is configured for deployment at `/prototype/`, which matches a GitHub Pages URL like `https://scepeday.github.io/prototype/`.
 
 ### Option 1: package script
 
@@ -55,7 +55,7 @@ This uses the `gh-pages` package to publish the `dist/` directory.
 
 1. Run `npm run build`
 2. Publish the generated `dist/` folder with GitHub Pages or a GitHub Actions workflow
-3. Keep the app on hash-based routes such as `/#/dashboard`
+3. Keep the app on hash-based routes such as `/prototype/#/dashboard`
 
 ## Project notes
 
