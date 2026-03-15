@@ -67,3 +67,36 @@
   --glowA: rgba(255, 107, 99, 0.16);
   --glowB: rgba(214, 255, 55, 0.18);
 }
+
+.testerReset {
+  position: absolute;
+  left: 16px;
+  z-index: 3;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(9, 12, 20, 0.78);
+  color: rgba(245, 247, 251, 0.88);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.testerReset:hover {
+  transform: translateY(-1px);
+  background: rgba(18, 24, 38, 0.88);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.testerResetOnboarding {
+  bottom: 18px;
+}
+
+.testerResetWithNav {
+  bottom: 92px;
+}

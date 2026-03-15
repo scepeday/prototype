@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAppState } from "../../context/AppStateContext";
 import BottomNav from "./BottomNav";
 import styles from "./AppShell.module.css";
 
@@ -28,6 +29,8 @@ function getTheme(pathname: string) {
 
 export default function AppShell({ children }: { children: ReactNode }) {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { resetPrototype } = useAppState();
   const showBottomNav = !onboardingRoutes.has(location.pathname);
 
   return (
@@ -38,6 +41,26 @@ export default function AppShell({ children }: { children: ReactNode }) {
         <main className={`${styles.main} ${showBottomNav ? styles.withNav : ""}`}>
           {children}
         </main>
+        <button
+          type="button"
+          className={`${styles.testerReset} ${
+            showBottomNav ? styles.testerResetWithNav : styles.testerResetOnboarding
+          }`}
+          onClick={() => {
+            if (
+              !window.confirm(
+                "Reset the prototype for the next tester? This clears all local data and returns to sign up.",
+              )
+            ) {
+              return;
+            }
+
+            resetPrototype();
+            navigate("/signup", { replace: true });
+          }}
+        >
+          Reset demo
+        </button>
         {showBottomNav ? <BottomNav /> : null}
       </div>
     </div>

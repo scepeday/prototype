@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AvatarPreview from "../components/avatar/AvatarPreview";
 import ScreenHeader from "../components/ui/ScreenHeader";
 import StatCard from "../components/ui/StatCard";
@@ -6,8 +6,7 @@ import { getReadinessPercentage, useAppState } from "../context/AppStateContext"
 import styles from "../styles/screen.module.css";
 
 export default function ProfilePage() {
-  const navigate = useNavigate();
-  const { state, resetPrototype } = useAppState();
+  const { state } = useAppState();
   const readiness = getReadinessPercentage(state);
 
   return (
@@ -40,21 +39,11 @@ export default function ProfilePage() {
               <Link to="/avatar" className={styles.secondaryButton}>
                 Edit Avatar
               </Link>
-              <button
-                type="button"
-                className={styles.dangerButton}
-                onClick={() => {
-                  if (!window.confirm("Reset all local prototype data?")) {
-                    return;
-                  }
-
-                  resetPrototype();
-                  navigate("/signup");
-                }}
-              >
-                Reset Prototype Data
-              </button>
             </div>
+            <p className={styles.helper}>
+              Use the small reset demo button in the lower-left corner to clear the app
+              between user-testing sessions.
+            </p>
           </div>
         </section>
       </section>
